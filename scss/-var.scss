@@ -1,0 +1,373 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+@font-face {
+        font-family: Raph Lanok Future;
+        src: url(../fonts/RaphLanokFuture.ttf);
+}
+
+ //Reset
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    
+
+}
+h1, h2, h3, h4, h5, p, a{
+    margin: 0;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        
+    }
+
+}
+
+html{
+    font-size: 10px;
+}
+
+//Color Pallette
+    $nav-blue:#004aca;
+    $main-blue:#053c9b;
+    $blue-text:#00266e;
+    $dark-blue:rgb(7, 4, 39);
+    $Clight: #e8e8e8;
+    $Contact:$Clight;
+    $board: #852004;
+        //Cards 
+    $Cgold: rgb(250, 183, 0);
+    $Cdark: #212121;
+
+
+//Functions
+@mixin flex ($flex, $direction, $just, $align){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $just;
+    align-items:$align;  
+}
+
+
+//Font-sizes medias
+@mixin h1{
+    @media (min-width:1400px){
+        font-size: 40px;
+    }
+    @media (max-width:1400px){
+        font-size:35px;
+    }
+    @media (max-width:1200px){
+        font-size:30px;
+    }
+    @media (max-width:991px){
+        font-size:40px;
+    }
+    @media (max-width:576px){
+    font-size:35px;
+    }
+    @media (max-width:400px){
+        font-size:30px;
+        }
+}
+@mixin li{ //Only for <991px
+    @media (max-width:991px){
+        margin: 0rem 1rem;
+        padding: 1.5rem;
+        a ,p{
+            font-size:2rem;
+        }
+    }
+    @media (max-width:768px){
+        margin: 1rem;
+        padding: 0 1.5rem;
+        a,p{
+            font-size:2rem;
+        }
+    }
+    @media (max-width:576px){
+        margin: 0 .5rem;
+        padding: 0 1.5rem;
+        a,p{
+            font-size:1.8rem;
+        }
+    }
+
+    @media (max-width:500px){
+        margin: 0 .5rem;
+        padding: 0 .5rem;
+
+    }
+
+    @media (max-width:400px){
+        margin: 0 .5rem;
+        padding: 0 .5rem;
+        a,p{
+            font-size:1.6rem;
+        }
+    }
+}
+@mixin main-title{
+    @media (min-width:1200px){
+        font-size:10rem;
+    }
+    @media (max-width:1200px){
+        font-size:10rem;
+    }
+    @media (max-width:991px){
+        font-size:10rem;
+    }
+    @media (max-width:768px){
+        font-size:10rem;
+    }
+    @media (max-width:576px){
+        font-size:8rem;
+        padding: 50px 0;
+    }
+    @media (max-width:368px){
+        font-size:8rem;
+        padding: 50px 0;
+    }
+}
+@mixin main-subtitle{
+    @media (min-width:1200px){
+        font-size:3rem;
+    }
+    @media (max-width:1200px){
+        font-size:3rem;
+    }
+    @media (max-width:991px){
+        font-size:3rem;
+    }
+    @media (max-width:768px){
+        font-size:2.5rem;
+    }
+    @media (max-width:576px){
+        font-size:2.5rem;
+    }
+    @media (max-width:368px){
+        font-size:2rem;
+    }
+}
+    //Intro
+@mixin video-title{
+    @media (min-width:1200px){
+        font-size:12rem;
+    }
+    @media (max-width:1200px){
+        font-size:8rem;
+    }
+    @media (max-width:991px){
+        font-size:8rem;
+    }
+    @media (max-width:768px){
+        font-size:6rem;
+    }
+    @media (max-width:576px){
+        font-size:5rem;
+    }
+    @media (max-width:368px){
+        font-size:4rem;
+    }
+}
+@mixin video-subtitle{
+    @media (min-width:1200px){
+        font-size:2rem;
+    }
+    @media (max-width:1200px){
+        font-size:1.8rem;
+    }
+    @media (max-width:991px){
+        font-size:1.8rem;
+    }
+    @media (max-width:768px){
+        font-size:1.6rem;
+    }
+    @media (max-width:576px){
+        font-size:1.6rem;
+    }
+    @media (max-width:368px){
+        font-size:2rem;
+    } 
+}
+    //About us
+@mixin about-p{
+    @media (min-width:1200px){
+        font-size:2.5rem;
+        line-height: 5rem;
+    }
+    @media (max-width:1200px){
+        font-size:2.5rem;
+        line-height: 5rem;
+    }
+    @media (max-width:991px){
+        font-size:2.5rem;
+        line-height: 5rem;
+    }
+    @media (max-width:768px){
+        font-size:2.5rem;
+        line-height: 5rem;
+    }
+    @media (max-width:576px){
+        font-size:2rem;
+        line-height: 3.5rem;
+    }
+    @media (max-width:368px){
+        font-size:1.8rem;
+        line-height: 3rem;
+    } 
+}
+@mixin cont-n{
+    @media (min-width:1200px){
+        font-size:4.5rem;
+    }
+    @media (max-width:1200px){
+        font-size:4.5rem;
+    }
+    @media (max-width:991px){
+        font-size:4.5rem;
+    }
+    @media (max-width:768px){
+        font-size:4.5rem;
+    }
+    @media (max-width:576px){
+        font-size:3.5rem;
+    }
+    @media (max-width:368px){
+        font-size:3rem;
+    } 
+}
+@mixin cont-p {
+    @media (min-width:1200px){
+        font-size:3.5rem;
+    }
+    @media (max-width:1200px){
+        font-size:3.5rem;
+    }
+    @media (max-width:991px){
+        font-size:3.5rem;
+    }
+    @media (max-width:768px){
+        font-size:3.5rem;
+    }
+    @media (max-width:576px){
+        font-size:3rem;
+    }
+    @media (max-width:368px){
+        font-size:2rem;
+    } 
+}
+    //Services
+
+        //Cards
+@mixin card-title{
+    @media (max-width: 576px){
+        font-size: 2.5rem;
+    }
+}
+@mixin card-p{
+    @media (max-width: 576px){
+        font-size: 1.2rem;
+    }
+    @media (max-width: 500px){
+        font-size: 1.2rem;
+    }
+}
+@mixin card-sub-p{
+    @media (max-width: 576px){
+        font-size: 1.2rem;
+    }
+}
+@mixin card-boton{
+    @media (max-width: 576px){
+        font-size: 1.3rem;
+    }
+}
+@mixin card-featured{
+    @media (max-width: 576px){
+        font-size: 1.4rem;
+    }
+}
+@mixin card-flipped-p {
+    @media (max-width: 576px){
+        font-size: 1.4rem;
+        padding:0;
+        margin: 10px 0;
+    }
+}
+$cardP: 1.6rem;     //Card content + buttons
+$cardSubP: 2rem;    //h5
+
+
+//Footer
+@mixin footer-title{
+    @media (min-width:140px){
+        font-size:4rem;
+    }
+    @media (max-width:1400px){
+        font-size:3.5rem;
+    }
+    @media (max-width:1200px){
+        font-size:3.5rem;
+    }
+    @media (max-width:991px){
+        font-size:3.5rem;
+    }
+    @media (max-width:768px){
+        font-size:3.5rem;
+    }
+    @media (max-width:576px){
+        font-size:3.5rem;
+    }
+    @media (max-width:368px){
+        font-size:3.5rem;
+    }
+}
+@mixin footer-slogan{
+    @media (min-width:140px){
+        font-size:2rem;
+    }
+    @media (max-width:1400px){
+        font-size:1.8rem;
+    }
+    @media (max-width:1200px){
+        font-size:1.8rem;
+        padding: 0 20px;
+    }
+    @media (max-width:991px){
+        font-size:1.8rem;
+    }
+    @media (max-width:768px){
+        font-size:1.6rem;
+    }
+    @media (max-width:576px){
+        font-size:1.8rem;
+    }
+    @media (max-width:368px){
+        font-size:1.8rem;
+    }
+}
+@mixin footer-info{
+    @media (min-width:140px){
+        font-size:1.6rem;
+    }
+    @media (max-width:1400px){
+        font-size:1.5rem;
+    }
+    @media (max-width:1200px){
+        font-size:1.5rem;
+    }
+    @media (max-width:991px){
+        font-size:1.5rem;
+    }
+    @media (max-width:768px){
+        font-size:1.5rem;
+    }
+    @media (max-width:576px){
+        font-size:1.5rem;
+    }
+    @media (max-width:368px){
+        font-size:1.5rem;
+    }
+}

@@ -1,0 +1,238 @@
+//Main clases
+
+h1{ 
+    @include h1;
+    color: $main-blue;
+    text-align: center;
+    
+    font-size: 40px;
+    font-family: "Raph Lanok Future",sans-serif;
+    font-weight: 400;
+    padding: 0 15px;
+    margin: 0px;
+}
+
+
+.main-title{
+    color: $main-blue;
+    @include main-title;
+    font-family: "Raph Lanok Future",sans-serif;
+    text-align: center;
+    padding: 100px 0;
+    margin: 0;
+}
+
+.main-subtitle{
+    @include main-subtitle;
+    color: $blue-text;
+    text-align: center;
+    padding-bottom: 50px;
+    margin: 0;
+}
+
+.main-subtitle-comment{
+    color:$board;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+//
+
+html,body{
+    overflow-x: hidden;
+    a{
+        text-decoration: none;
+    }
+    &::-webkit-scrollbar{
+        width: 7px;
+        height: 30px;
+        background-color: white;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $main-blue;
+        border-radius: 30px;
+    }
+}
+
+//Header
+
+.grid-header{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-header{
+    width: 100%;
+    img{ //Logo
+        padding: 15px;
+        width: 100px;
+    }
+    a{
+        color: black;
+        font-size:20px ;
+        transition: all 200ms;
+    }
+    >div:first-of-type{ //Logo-Title div
+        @include flex(flex,row,flex-start,center);
+        grid-template: title;
+        img{
+            transition: all 300ms;
+        }
+        &:hover img{
+            transform: rotate(180deg);
+        }
+    }
+    div:last-of-type{ // Nav div
+        @include flex(flex,row,flex-end,center);
+        padding-right:15px;
+        img{
+            width: 35px;
+            padding: 5px;
+        }
+    }
+    nav { //about us, services, contact, our platform
+        @include flex (flex,row,center,center);
+        ul { //about us, services, contact
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+            li{
+                margin: 20px;
+                padding: 15px;
+                transition: all 200ms;
+                &:hover{
+                    transform: scale(1.2);
+                }
+                a{
+                    color: black;
+                    font-size:20px ;
+                    transition: all .25s ease;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color:$nav-blue;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: all .25s ease;
+                        
+                    }
+                    &:hover {
+                        color: $main-blue;
+                        &::after{
+                            transform: scaleX(1);
+                        }   
+                    }
+                }  
+            }
+        }
+        .li{
+            @include li;
+        }   
+    }
+}
+//Header hiding js
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    transition: all .3s ease;
+    border-bottom: 1px solid $main-blue;
+}
+
+#header.hide{
+    top: -101px;
+}
+
+//Our Platform
+.mediaA{
+    display: none;
+    cursor: pointer;
+}
+.mediaB{
+    font-size: 20px;
+    cursor: pointer;
+}
+//Logo WhatsApp Fixed
+#wpp{
+    position: fixed;
+    background-color: none;
+    bottom: 0px;
+    right: 0px;
+
+    padding: 15px;
+    width: 70px;
+    z-index: 1;
+}
+
+//Footer
+footer{
+    @include flex(flex,column,unset,center);
+    width: 100%;
+    padding: 3rem 3rem 0 3rem;
+    background: linear-gradient(196deg, rgba(1,31,89,1) 22%, rgba(7,4,39,1) 100%);
+    text-align: center;
+    a{
+        font-size: 1.6rem;
+        color: white;
+        &:hover{
+            color: white;
+        }
+    }
+    
+}
+.footer-grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer-title{
+    @include footer-title;
+    font-family: "Raph Lanok Future",sans-serif;
+    color: white;
+    text-align: left;
+    white-space: nowrap ;
+    // grid-area: title;
+}
+.footer-slogan{
+    @include footer-slogan;
+    color: white;
+    align-self: center;
+    // grid-area: slogan;
+
+}
+.made-by{
+    font-size: 1.2rem;
+    color: white;
+    i{
+        margin: 0 5px;
+    }
+}
+.footer-info-cont{
+    display: flex;
+    justify-content: center;
+    // align-items: center
+}
+.footer-info{
+    @include flex (flex,column,unset, flex-start);
+    a{
+        @include footer-info;
+
+        &:hover .fa{
+        animation: shakeA 300ms alternate;
+        }
+    }   
+}
+

@@ -1,0 +1,55 @@
+//About us
+
+#about-us{
+    background-color:$Clight ;
+    max-width: 100vw;
+    
+    div:last-of-type p{
+        @include cont-p;
+        text-align: center;
+        line-height: 50px;
+        color: $blue-text;
+        padding: 5px;
+        margin: 0;
+    }
+}
+.about-us-p p{
+    @include about-p;
+    text-align: center;
+    color: $blue-text;
+    margin-bottom: 15px
+}
+.contadores{
+    @include flex (flex, row, center, center);  
+}
+  .cont{
+    @include flex (flex, column, center, center);
+    margin: 50px;
+    div::before{
+        content: "+";
+        color: #852004;  
+      }
+  }
+  .number{
+    @include cont-n;
+    color: $board;
+  
+}
+
+//Count
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.ocultar{
+    opacity: 0;
+}
+.animar{
+    animation: aparecer 1s;
+}
