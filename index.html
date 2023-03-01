@@ -14,7 +14,7 @@
 
     <title>Instrumental Dufour - Magnetic Compass Reparation</title>
 
-    <link rel="icon" href="img/brujula.gif">
+    <link rel="icon" href="assets/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -38,7 +38,9 @@
                 <a href="#">
                     <h1 class="img-fluid">Instrumental Dufour</h1>
                 </a>
-                <a href="#"> <img src="img/brujula.gif" alt="Instrumental Dufour"> </a>
+                <!-- <a href="#"> <img src="img/brujula.gif" alt="Instrumental Dufour"> </a> -->
+                <a href="#"> <img src="assets/logo2.png" alt="Instrumental Dufour"> </a>
+
             </div>
             <!-- Nav -->
             <nav>
@@ -49,15 +51,18 @@
                 </ul>
                 <div class="li">
                     <p class="mediaA" onclick="alerteffect()"> Our platform</p>
-                    <p class="mediaA" onclick="alerteffect()"> <img src="img/login_black_24dp.svg" alt="Sign in"> </p>
+                    <p class="mediaA"><i class="fa-solid fa-right-to-bracket" onclick="alerteffect()"></i></p> 
+
                 </div>
             </nav>
 
             <!-- Sign In -->
 
             <div>
-                <p class="mediaB" onclick="alerteffect()"> Our platform</p>
-                <p class="mediaB" onclick="alerteffect()"> <img src="img/login_black_24dp.svg" alt="Sign in"> </p>
+                <div class="platform">
+                    <p class="mediaB" onclick="alerteffect()"> Our platform</p>
+                    <p class="mediaB"><i class="fa-solid fa-right-to-bracket" onclick="alerteffect()"></i></p> 
+                </div>
             </div>
         </div>
     </header>
@@ -112,11 +117,10 @@
 
             <img src="img/Buque-frame.jpg" alt="Ship picture banner"> 
 
-
         </section> -->
         <section class="intro">
             <div class="carouselContainer">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="7000" data-pause="hover">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -140,16 +144,35 @@
                             </div>
                         </div>
 
-
+                        <!-- Slide 2 -->
                         <div class="carousel-item">
                             <div class="w-100 carouselDiv">
                                 <div class="slide1">
                                     <div class="overlay2"></div>
                                     <div class="absolute2">
-                                        <h3>We are the first enterprice to blkabka sgutiguti in the guti guti online.</h3>
-                                        <a href="">Watch guti</a>
+                                        <h3>We are the first enterprise to introduce <span>remote adjustment service</span> for magnetic compass.
+                                        </h3>  
+                                        <h4>Have your magnetic compass adjusted remotely without having a technician onboard. And get all necessaries certificates to be presented to any local or international authority.</h4>
+                                        <a href="#">Learn more</a>
                                     </div>
                                     <video src="assets/Video2.mov" muted loop autoplay type="video/mp4"></video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="w-100 carouselDiv">
+                                <div class="slide2">
+                                    <div class="overlay3"></div>
+                                    <div class="absolute3">
+                                        <div>
+                                            <h3>All your certificates in one place.</h3>
+                                            <h4>Create your ship profile and download all your magnetic compass certificates and documents whenever it is necessary</h4>
+                                        </div>
+                                            <a href="">Join now</a>
+                                    </div>
+                                    <img class="pelado" src="assets/slide3.jpeg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -184,7 +207,7 @@
 
         <section id="about-us" class="container" data-aos="fade-up" data-aos-duration="600">
             <article class="row justify-content-center">
-                <h2 class="main-title">About us</h2>
+                <h2 class="main-title col-12">About us</h2>
                 <div class="about-us-p col-xxl-8 col-xl-8 col-lg-9 col-md-10 col-sm-11">
                     <p>Instrumental Dufour was founded in 1939, and since then we have been providing all kind of
                         services for magnetic compass. Not only, repairing and calibrating them but also, issuing
@@ -210,7 +233,6 @@
                     </div>
                 </div>
             </article>
-
         </section>
 
         <!-- Services -->

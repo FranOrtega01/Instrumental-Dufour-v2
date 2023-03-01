@@ -158,10 +158,23 @@ html,body{
 .mediaA{
     display: none;
     cursor: pointer;
+    i{
+        padding-left: 4px;
+    }
 }
 .mediaB{
     font-size: 20px;
     cursor: pointer;
+    i{
+        padding-left: 4px;
+    }
+}
+.platform{
+    // border: 1px solid black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 30px;
+    background: linear-gradient(196deg, rgba(1,31,89,1) 22%, rgba(7,4,39,1) 100%);
 }
 //Logo WhatsApp Fixed
 #wpp{

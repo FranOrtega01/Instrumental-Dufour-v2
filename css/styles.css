@@ -227,10 +227,20 @@ html, body {
 .mediaA {
   display: none;
   cursor: pointer; }
+  .mediaA i {
+    padding-left: 4px; }
 
 .mediaB {
   font-size: 20px;
   cursor: pointer; }
+  .mediaB i {
+    padding-left: 4px; }
+
+.platform {
+  color: white;
+  padding: 4px 10px;
+  border-radius: 30px;
+  background: linear-gradient(196deg, #011f59 22%, #070427 100%); }
 
 #wpp {
   position: fixed;
@@ -357,12 +367,15 @@ footer {
 
 .intro {
   width: 100%;
-  max-height: calc(100vh - 100px);
   overflow: hidden;
   position: relative;
   margin-top: 100px; }
   .intro video {
     width: 100%; }
+  .intro img {
+    width: 100%;
+    transform: translateY(-150px);
+    z-index: 1; }
 
 .absolute {
   width: 100%;
@@ -418,16 +431,14 @@ footer {
 .overlay {
   width: 100%;
   height: 100%;
-  max-height: 100vh;
   position: absolute;
   background-color: #05021c;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .absolute2 {
   width: 100%;
   height: 100%;
-  padding: 0 250px;
-  top: -10%;
+  padding: 0 300px;
   color: white;
   position: absolute;
   text-align: center;
@@ -436,6 +447,10 @@ footer {
   justify-content: space-evenly;
   flex-direction: column;
   z-index: 100; }
+  .absolute2 span {
+    background-color: #fab700;
+    color: #212121;
+    padding: 0 4px; }
   .absolute2 h2 {
     font-family: "Raph Lanok Future",sans-serif; }
     @media (min-width: 1200px) {
@@ -475,12 +490,18 @@ footer {
     .absolute2 p {
       font-size: 2rem; } }
   .absolute2 h3 {
+    font-weight: 600;
     font-size: 45px;
     line-height: 1.5;
-    width: 45%;
+    width: 50%;
+    text-align: left; }
+  .absolute2 h4 {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 50%;
     text-align: left; }
   .absolute2 a {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     padding: 12px;
     border-radius: 15px;
@@ -490,16 +511,17 @@ footer {
     opacity: 0.8;
     transition: all 300ms; }
     .absolute2 a:hover {
-      font-size: 18px;
+      scale: 1.05;
       opacity: 1; }
 
 .overlay2 {
   width: 100%;
   height: 100%;
-  max-height: 100vh;
   position: absolute;
+  top: 0;
+  right: 0;
   background-color: black;
-  opacity: 0.7; }
+  opacity: 0.5; }
 
 .absoluteButton {
   z-index: 100;
@@ -513,17 +535,17 @@ footer {
   left: 50%;
   transform: translateX(-50%); }
   .absoluteButton a {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     padding: 12px;
     border-radius: 15px;
     border: 1px solid white;
     color: white;
     text-decoration: none;
-    opacity: 0.8;
-    transition: all 300ms; }
+    opacity: 1;
+    transition: all 400ms ease; }
     .absoluteButton a:hover {
-      font-size: 18px;
+      font-size: 22px;
       opacity: 1; }
 
 .video-title {
@@ -545,6 +567,102 @@ footer {
   overflow: hidden; }
   .carouselDiv p {
     color: white; }
+
+.slide, .slide1, .slide2 {
+  max-height: calc(100vh - 100px); }
+
+.absolute3 {
+  width: 100%;
+  height: 100%;
+  padding: 0 300px;
+  color: white;
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  .absolute3 span {
+    background-color: #fab700;
+    color: #212121;
+    padding: 0 4px; }
+  .absolute3 h2 {
+    font-family: "Raph Lanok Future",sans-serif; }
+    @media (min-width: 1200px) {
+      .absolute3 h2 {
+        font-size: 12rem; } }
+    @media (max-width: 1200px) {
+      .absolute3 h2 {
+        font-size: 8rem; } }
+    @media (max-width: 991px) {
+      .absolute3 h2 {
+        font-size: 8rem; } }
+    @media (max-width: 768px) {
+      .absolute3 h2 {
+        font-size: 6rem; } }
+    @media (max-width: 576px) {
+      .absolute3 h2 {
+        font-size: 5rem; } }
+    @media (max-width: 368px) {
+      .absolute3 h2 {
+        font-size: 4rem; } }
+  @media (min-width: 1200px) {
+    .absolute3 p {
+      font-size: 2rem; } }
+  @media (max-width: 1200px) {
+    .absolute3 p {
+      font-size: 1.8rem; } }
+  @media (max-width: 991px) {
+    .absolute3 p {
+      font-size: 1.8rem; } }
+  @media (max-width: 768px) {
+    .absolute3 p {
+      font-size: 1.6rem; } }
+  @media (max-width: 576px) {
+    .absolute3 p {
+      font-size: 1.6rem; } }
+  @media (max-width: 368px) {
+    .absolute3 p {
+      font-size: 2rem; } }
+  .absolute3 h3 {
+    margin: 30px 0;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 1.5;
+    width: 50%; }
+  .absolute3 h4 {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 50%; }
+  .absolute3 a {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 15px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 300ms; }
+    .absolute3 a:hover {
+      scale: 1.05;
+      opacity: 1; }
+  .absolute3 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.overlay3 {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.7; }
 
 #about-us {
   background-color: #e8e8e8;
