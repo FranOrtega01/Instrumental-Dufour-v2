@@ -12,10 +12,26 @@
         padding: 5px;
         margin: 0;
     }
+    article{
+        position: relative;
+    }
+}
+.afro{
+    position: sticky;
+    top: 0;
+}
+.certificaciones{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 50px 0;
+    img{
+        height: 150px
+    }
 }
 .about-us-p p{
     @include about-p;
-    text-align: center;
+    text-align: justify;
     color: $blue-text;
     margin-bottom: 15px
 }

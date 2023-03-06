@@ -691,9 +691,23 @@ footer {
     @media (max-width: 368px) {
       #about-us div:last-of-type p {
         font-size: 2rem; } }
+  #about-us article {
+    position: relative; }
+
+.afro {
+  position: sticky;
+  top: 0; }
+
+.certificaciones {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 50px 0; }
+  .certificaciones img {
+    height: 150px; }
 
 .about-us-p p {
-  text-align: center;
+  text-align: justify;
   color: #00266e;
   margin-bottom: 15px; }
   @media (min-width: 1200px) {
