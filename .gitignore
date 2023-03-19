@@ -1,3 +1,4 @@
 /node_modules
-/assets/Buque.mp4
-/assets/Video2.mov
+src/public/assets/Buque.mp4
+src/public/assets/Video2.mp4
+.env

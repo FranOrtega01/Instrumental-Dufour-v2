@@ -21,11 +21,12 @@ h1, h2, h3, h4, h5, p, a{
         text-decoration: none;
         
     }
-
 }
+
 
 html{
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 //Color Pallette
@@ -38,6 +39,7 @@ html{
     $board: #852004;
         //Cards 
     $Cgold: rgb(250, 183, 0);
+    $Ccoffe: #d7a360;
     $Cdark: #212121;
 
 
@@ -49,6 +51,11 @@ html{
     align-items:$align;  
 }
 
+.preventSelect {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
 
 //Font-sizes medias
 @mixin h1{

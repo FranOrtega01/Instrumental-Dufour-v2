@@ -1,0 +1,26 @@
+#new{
+    padding-bottom: 100px;
+    img{
+        width: 600px;
+        border-radius: 4px;
+    }
+    article{
+        margin: 0;
+        padding: 0;
+    }
+}
+.new-p{
+    @extend .about-us-p;
+    text-align: justify;
+}
+.new-subtitle{
+    @extend .main-subtitle;
+    text-align: left;
+    color: $Ccoffe
+}
+
+.newInfo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

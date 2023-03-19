@@ -2,29 +2,13 @@
     #header.hide{
         top: -201px;
     }
-    .intro{
+    #intro{
         margin-top: 200px;
     }
-    .info-cont iframe{
-        width: 300px;
-        height: 250px;
+    .platformCont{
+        display: none;
     }
-    form textarea{
-        height: 11rem;
-    }
-    .contact-cont{
-        margin: 0;
-    }
-}
-@media (max-width:769px){
-    .contact-cont{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    form{
-        width: 100%;
-    }
+    
 }
 @media (min-width:1400px){
     .cont .number, .cont p{
@@ -50,7 +34,7 @@
         }
        
     }
-    .intro{
+    #intro{
         margin-top: 90px;
     }
     .cont .number, .cont p{
@@ -69,8 +53,7 @@
                 justify-content: center;
                 li{
                     padding: 0;
-                    margin: 15px;
-                   
+                    margin: 15px;        
                 }
             }
         }
@@ -96,10 +79,6 @@
         nav {
             position: relative;
             height: 100%;
-            // .li{
-            //     padding: 15px;
-            //     margin: 0 10px;
-            // }
         }  
     }
     .mediaA{
@@ -108,8 +87,8 @@
     .mediaB{
         display: none;
     }
-    .intro{
-        margin-top: 165px;
+    #intro{
+        margin-top: 160px;
     }
     .footer-title{
         grid-area: title;
@@ -153,21 +132,8 @@
     .mediaB{
         display: none;
     }
-    .intro{
-        margin-top: 155px;
-    }
-    //About us
-    .about-us-p p{
-        text-align: justify;
-        margin: 15px;
-    }
-
-    //Contact
-    .contact-cont{
-        padding: 30px 0 0 0;
-    }
-    .form-cont{
-        margin: 100px 0;
+    #intro{
+        margin-top: 150px;
     }
 
     //Footer
@@ -236,64 +202,13 @@
         display: inline;
     }
     // Intro
-    .intro{
-        margin-top: 135px;
-    }
-    //About us
-    .cont{
-        margin: 20px;
-    }
-     //About us
-     .about-us-p p{
-        text-align: justify;
-        margin: 15px;
+    #intro{
+        margin-top: 132px;
     }
     #about-us div:last-of-type p{ //Cont p
         line-height: 3.5rem;
     }
-    //Services
 
-    .Cards{
-        @include flex (flex, column, center, center);
-        flex-wrap: nowrap;
-    }
-    .Card{
-        margin: 20px;
-        width: 315px;
-        height: 420px;
-        img{
-            height: 100px;
-        }
-    }
-    .cardBody{
-        height: 75%;
-        padding: 10px 20px 20px 20px;
-        >div:last-of-type{
-            a, button{
-                padding: 15px 15px;
-                margin-top: 10px;
-            }
-        }
-    }
-    .cardHead{
-        height: 130px;
-        p{
-            left: 40%;
-        }
-    }
-    .cardFace-front{
-        padding: 15px 15px 0 15px;
-        ul{
-            margin: 0;
-        }
-    }
-    //Contact
-    .contact-cont{
-        padding: 30px 0 0 0;
-    }
-    .form-cont{
-        margin: 100px 0;
-    }
     //Footer
     .footer-grid{
         display: flex;
@@ -316,7 +231,7 @@
     .grid-header nav .li img{
         display: none;
     }
-    .intro{
+    #intro{
         margin-top: 132px;
     }
     .main-subtitle{
@@ -325,7 +240,44 @@
     .main-subtitle-comment{
         font-size:20px ;
     }
+
+    // Intro
+
+    .slide3Content a{
+        align-self: flex-start;
+    }
+
+
     //Cards
+
+    .aboutCard{
+        padding: 30px 20px;
+        h3{
+            font-size: 26px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+
+    //Contact
+    #contact{
+        h3{
+            font-size: 40px;
+        }
+    }
+    .inquiresInfo{
+        a{
+            font-size: 22px;
+        }
+        p{
+            font-size: 20px;
+        }
+        >div{
+            margin: 15px 0;
+        }
+    }
+
     //Footer
     .footer-slogan{
         padding: 0 30px
@@ -357,8 +309,13 @@
     }
 
 }
-@media (max-width: 400px) {//Adjust header gap.
-    .intro{
+@media (max-width: 405px) {//Adjust header gap.
+
+    #header .li{
+        margin: 0;
+    }
+
+    #intro{
         margin-top: 129px;
     }
     .main-subtitle{
@@ -371,6 +328,9 @@
     }
     .footer-slogan{
         padding: 0;
+    }
+    .mediaA i{
+        display: none;
     }
 }
 

@@ -1,0 +1,333 @@
+// #contact{
+//     background-color: $Contact;
+// }
+// .info-section{
+//     margin-bottom:40px;
+//     p{
+//         cursor: default;
+//         display: inline;
+//     }
+// }
+// .info-cont iframe{
+//     width: 400px;
+//     height: 300px;
+// }
+// .line{
+//     position: relative;
+//     &::before{
+//         content: "";
+//         width: 30%;
+//         height: 2px;
+//         background-color: rgb(172, 172, 172);
+//         position: absolute;
+//         top: -18px;
+//         left:0;
+//     }
+// }
+// .info-title{
+//     font-size: 30px;
+//     margin-bottom: 10px;
+// }
+// a.info-desc{
+//     font-size: 14px;
+//     color: black;
+//     text-decoration: black;
+//     &:hover{
+//         color: $main-blue;
+//         .fa{
+//         animation: shakeA 300ms alternate;
+//     }
+// }
+// }
+
+// p.info-desc{
+//     font-size: 16px;
+//     color: black;
+//     text-decoration: black;
+//     &:hover .fa{
+//         animation: shakeP 350ms alternate;
+//     }
+// }
+
+// .info-desc{
+//     font-size: 20px;
+// }
+// //Shakes
+
+// @keyframes shakeA {
+//     50%{
+//         transform:rotate(-15deg) scale(1.2);
+//     }
+//     100%{
+//         transform: rotate(15deg) scale(1);
+//     }
+// }
+// @keyframes shakeP {
+//     50%{
+//         transform:rotate(180deg) scale(1.2);
+//     }
+//     100%{
+//         transform: rotate(360deg) scale(1);
+//     }
+// }
+
+// //Icons
+// .fa{ 
+//     margin-right: 5px;
+// }
+
+// //Form
+// .form-group{
+//     @include flex (flex,column,unset,unset);
+//     margin-bottom: 25px;
+//     button{
+//         margin: 0 auto;
+//         padding: 5px 0;
+//         width: 200px;
+//         font-size: 16px;
+//         border: none;
+//         outline: none;
+//         background-color: $Contact;
+//         border-radius: 4px;
+//         font-weight: 500;
+//         color: $blue-text;
+//         transition: all 200ms ;
+
+//         &:hover{
+//             transform: scale(1.2);
+//         }
+//     }
+// }
+
+// form{
+//     label, p{
+//         font-size: 18px;
+//         margin-bottom: 8px;
+//         font-weight: 600;   
+//     }
+//     .input{
+//         height: 4rem;
+//         padding: 15px;
+//         font-size: 1.6rem;
+//         background-color: $Contact;
+//         border: none;
+//         border-bottom: 1px solid rgb(172, 172, 172);
+//         outline: none;
+//         transition: all 150ms;
+
+//         &:focus{
+//             border-bottom: 2px solid $main-blue;
+//         }
+//     }
+//     select{
+//         @extend .input;
+//         padding: 0 0 0 10px;
+//         height: 4rem;
+//         font-weight: 600;
+//         option{
+//             font-size: 1.7rem;
+//         }
+//     }
+//     #file{
+//         font-size: 1.2rem;
+//     }
+//     textarea{
+//         @extend .input;
+//         height: 14rem;
+//         color: rgb(66, 66, 66);
+//         resize: none;
+//         &::-webkit-scrollbar{
+//             width: 5px;
+//         }
+//         &::-webkit-scrollbar-thumb{
+//             background-color: rgb(172, 172, 172);
+//             border-radius: 30px;
+//         } 
+//     }
+// }
+// .contact-cont{
+//     padding: 100px 0;
+
+//     position: relative;
+//     &::before{
+//         content: "";
+//         width: 90%;
+//         height: 2px;
+//         background-color: rgb(172, 172, 172);
+//         position: absolute;
+//         top: 0;
+//         left:50%;
+//         transform: translate(-50%,0);     
+//     }
+// }
+// .selected{
+//     animation: selected 500ms;
+// }
+// @keyframes selected{
+//     50%{transform: scale(1.2);}
+//     100%{transform: scale(1);}
+// }
+
+// .form-title{
+//     @extend .info-title;
+//     margin-bottom: 2rem;
+// }
+
+// .g-recaptcha{
+//     display: flex;
+//     justify-content: center;
+//     margin: 20px 0;
+// }
+
+#contact{
+    padding-bottom: 100px;
+    h3{
+        font-size: 50px;
+        margin:50px 0 100px 0;
+    }
+	article{
+		padding: 0;
+		margin: 0;
+	}
+}
+.inquiresInfo{
+    // display: grid;
+    // width: 100%;
+    // grid-template-columns: 1fr 1fr 1fr;
+	@include flex(flex, row, center, center);
+	flex-wrap: wrap;
+    a{
+        font-size:28px;
+        color: $blue-text;
+        font-weight: 600;
+    }
+    p{
+        font-size: 24px;
+    }
+    >div{
+        @include flex(flex, column, center, center);
+		margin: 15px 30px;
+		div{
+			@include flex(flex, row, center, center);
+			i{
+				font-size: 18px;
+				margin-right: 5px;
+			}
+		}
+    }
+
+}
+
+.contactFormCont{
+    margin-top: 50px;
+}
+
+
+// iOS Reset 
+input {
+	appearance: none;
+	border-radius: 0;
+}
+
+.cardContact {
+    margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px 0 rgba(#999, .25);
+	padding: .75rem;
+}
+
+.card-form {
+	padding: 2rem 1rem 0;
+    width: 100%;
+}
+
+.input {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	padding-top: 1.5rem;
+	margin-bottom: 20px;
+	&+.input {
+		margin-top: 1.5rem;
+	}
+}
+
+.input-label {
+	color: #8597a3;
+	position: absolute;
+	top: 1.5rem;
+	transition: .25s ease;
+    font-size: 18px;
+}
+
+.input-field {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 2px solid #eee; 
+	font: inherit;
+	font-size: 18px;
+	transition: all 250ms ease;
+	// padding: .25rem 0;
+	&:focus,&:valid {
+		outline: 0;
+		border-bottom-color: $blue-text;
+		&+.input-label {
+			color: $main-blue;
+			transform: translateY(-2.4rem);
+		}
+	}
+}
+textarea.input-field{
+    resize: none;
+    height: 200px;
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: rgb(172, 172, 172);
+        border-radius: 30px;
+    } 
+}
+.action {
+	margin-block: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.action-button {
+	font: inherit;
+	font-size: 1.25rem;
+	padding: 1em;
+	width: 50%;
+	font-weight: 500;
+	background-color: $blue-text;
+	border-radius: 6px;
+	color: #FFF;
+	border: 0;
+	font-size: 16px;
+	cursor: pointer;
+	&:disabled{
+		cursor: not-allowed;
+		opacity: .7;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+
+.card-info {
+	padding: 1rem 1rem;
+	text-align: center;
+	font-size: .875rem;
+	color: #8597a3;
+	a {
+		display: block;
+		color: #6658d3;
+		text-decoration: none;
+	}
+}
+

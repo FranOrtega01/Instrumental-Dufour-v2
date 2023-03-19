@@ -35,9 +35,8 @@ h1{
     font-size: 25px;
     text-align: center;
 }
-
-
 //
+
 
 html,body{
     overflow-x: hidden;
@@ -84,14 +83,7 @@ html,body{
             transform: rotate(180deg);
         }
     }
-    div:last-of-type{ // Nav div
-        @include flex(flex,row,flex-end,center);
-        padding-right:15px;
-        img{
-            width: 35px;
-            padding: 5px;
-        }
-    }
+    
     nav { //about us, services, contact, our platform
         @include flex (flex,row,center,center);
         ul { //about us, services, contact
@@ -169,8 +161,12 @@ html,body{
         padding-left: 4px;
     }
 }
+.platformCont{
+    @include flex(flex,row,flex-end,center);
+    padding-right:15px;
+}
 .platform{
-    // border: 1px solid black;
+    @include flex(flex,row,center,center);
     color: white;
     padding: 4px 10px;
     border-radius: 30px;

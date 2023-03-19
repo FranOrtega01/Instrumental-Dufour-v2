@@ -1,0 +1,106 @@
+#services{
+    padding-bottom: 100px;
+    background-color: #07141d;
+}
+.services-title{
+    @extend .main-title;
+    color: $Clight;
+}
+.services-subtitle{
+    @extend .main-subtitle;
+    font-size: 24px;
+    color: $Clight;
+}
+//Accordion
+#accordion{
+    margin:0 auto ;
+    >li{
+        list-style: none;
+        width: 100%;
+        margin-bottom:10px ;
+        background-color: $Clight;
+        padding:10px;
+        border-radius: 6px;
+    }
+    label{
+        @extend .preventSelect;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 24px;
+        font-weight: 500;
+        cursor: pointer;
+        color:$board ;
+        transition: all 600ms;
+        position: relative;
+        &::after{
+            content: "";
+            width: clamp(250px, 30%, 30%);
+            height: 2px;
+            background-color:$board;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 600ms ease;
+            
+        }
+    }
+    i{
+        color: black;
+        transition: all 300ms;
+    }
+    button{
+        @extend .platform;
+        padding: 10px;
+        margin: 20px 0 10px 0;
+        font-size: 14px;
+    }
+
+    input[type='checkbox']{
+        display: none;
+    }
+
+    input[type='checkbox']:checked {
+        ~ .contentAccordion{
+            max-height: 3000px;
+        }
+        + label{
+            font-size: 26px;
+            &::after{
+                transform: scaleX(1);
+            }
+            i{
+                transform: rotate(-90deg);
+            }
+        } 
+    }
+    h4{
+        font-size: 24px;
+        margin-block:40px;
+    }
+}
+
+.contentAccordion{
+    padding: 0 10px;
+    line-height: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 600ms ease-in-out;
+    li{
+        list-style:disc;
+        line-height: 24px;
+        font-size: 18px;
+        font-weight: 500;
+        margin-inline:30px ;
+        padding-block: 15px;
+    }
+}
+
+.servicesSubtitle{
+    padding: 15px 10px;
+    font-weight: 600;
+    font-size: 20px ;
+}

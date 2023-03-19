@@ -16,7 +16,16 @@ h1, h2, h3, h4, h5, p, a {
     text-decoration: none; }
 
 html {
-  font-size: 10px; }
+  font-size: 10px;
+  scroll-behavior: smooth; }
+
+.preventSelect, #accordion label {
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */ }
 
 h1 {
   color: #053c9b;
@@ -45,55 +54,55 @@ h1 {
     h1 {
       font-size: 30px; } }
 
-.main-title {
+.main-title, .services-title {
   color: #053c9b;
   font-family: "Raph Lanok Future",sans-serif;
   text-align: center;
   padding: 100px 0;
   margin: 0; }
   @media (min-width: 1200px) {
-    .main-title {
+    .main-title, .services-title {
       font-size: 10rem; } }
   @media (max-width: 1200px) {
-    .main-title {
+    .main-title, .services-title {
       font-size: 10rem; } }
   @media (max-width: 991px) {
-    .main-title {
+    .main-title, .services-title {
       font-size: 10rem; } }
   @media (max-width: 768px) {
-    .main-title {
+    .main-title, .services-title {
       font-size: 10rem; } }
   @media (max-width: 576px) {
-    .main-title {
+    .main-title, .services-title {
       font-size: 8rem;
       padding: 50px 0; } }
   @media (max-width: 368px) {
-    .main-title {
+    .main-title, .services-title {
       font-size: 8rem;
       padding: 50px 0; } }
 
-.main-subtitle {
+.main-subtitle, .new-subtitle, .services-subtitle {
   color: #00266e;
   text-align: center;
   padding-bottom: 50px;
   margin: 0; }
   @media (min-width: 1200px) {
-    .main-subtitle {
+    .main-subtitle, .new-subtitle, .services-subtitle {
       font-size: 3rem; } }
   @media (max-width: 1200px) {
-    .main-subtitle {
+    .main-subtitle, .new-subtitle, .services-subtitle {
       font-size: 3rem; } }
   @media (max-width: 991px) {
-    .main-subtitle {
+    .main-subtitle, .new-subtitle, .services-subtitle {
       font-size: 3rem; } }
   @media (max-width: 768px) {
-    .main-subtitle {
+    .main-subtitle, .new-subtitle, .services-subtitle {
       font-size: 2.5rem; } }
   @media (max-width: 576px) {
-    .main-subtitle {
+    .main-subtitle, .new-subtitle, .services-subtitle {
       font-size: 2.5rem; } }
   @media (max-width: 368px) {
-    .main-subtitle {
+    .main-subtitle, .new-subtitle, .services-subtitle {
       font-size: 2rem; } }
 
 .main-subtitle-comment {
@@ -137,15 +146,6 @@ html, body {
       transition: all 300ms; }
     .grid-header > div:first-of-type:hover img {
       transform: rotate(180deg); }
-  .grid-header div:last-of-type {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 15px; }
-    .grid-header div:last-of-type img {
-      width: 35px;
-      padding: 5px; }
   .grid-header nav {
     display: flex;
     flex-direction: row;
@@ -236,7 +236,18 @@ html, body {
   .mediaB i {
     padding-left: 4px; }
 
-.platform {
+.platformCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px; }
+
+.platform, #accordion button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   color: white;
   padding: 4px 10px;
   border-radius: 30px;
@@ -365,143 +376,67 @@ footer {
   .footer-info a:hover .fa {
     animation: shakeA 300ms alternate; }
 
-.intro {
+#intro {
   width: 100%;
   overflow: hidden;
   position: relative;
   margin-top: 100px; }
-  .intro video {
-    width: 100%; }
-  .intro img {
+  #intro video, #intro img {
     width: 100%;
-    transform: translateY(-150px);
-    z-index: 1; }
+    aspect-ratio: 16/9; }
+
+.slide {
+  max-height: calc(100vh - 100px);
+  position: relative; }
 
 .absolute {
-  width: 100%;
-  height: 33%;
-  color: white;
   position: absolute;
-  top: 25%;
-  right: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column; }
-  .absolute h2 {
-    font-family: "Raph Lanok Future",sans-serif; }
-    @media (min-width: 1200px) {
-      .absolute h2 {
-        font-size: 12rem; } }
-    @media (max-width: 1200px) {
-      .absolute h2 {
-        font-size: 8rem; } }
-    @media (max-width: 991px) {
-      .absolute h2 {
-        font-size: 8rem; } }
-    @media (max-width: 768px) {
-      .absolute h2 {
-        font-size: 6rem; } }
-    @media (max-width: 576px) {
-      .absolute h2 {
-        font-size: 5rem; } }
-    @media (max-width: 368px) {
-      .absolute h2 {
-        font-size: 4rem; } }
-  .absolute h3 {
-    font-size: 50px; }
-  @media (min-width: 1200px) {
-    .absolute p {
-      font-size: 2rem; } }
-  @media (max-width: 1200px) {
-    .absolute p {
-      font-size: 1.8rem; } }
-  @media (max-width: 991px) {
-    .absolute p {
-      font-size: 1.8rem; } }
-  @media (max-width: 768px) {
-    .absolute p {
-      font-size: 1.6rem; } }
-  @media (max-width: 576px) {
-    .absolute p {
-      font-size: 1.6rem; } }
-  @media (max-width: 368px) {
-    .absolute p {
-      font-size: 2rem; } }
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100; }
 
-.overlay {
+.overlay, .overlay2 {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
   position: absolute;
   background-color: #05021c;
-  opacity: 0.6; }
+  opacity: 0.6;
+  z-index: 1; }
 
-.absolute2 {
-  width: 100%;
+.overlay2 {
+  background-color: black;
+  opacity: 0.7; }
+
+.slide2Content, .slide3Content, .slide1Content {
   height: 100%;
-  padding: 0 300px;
-  color: white;
-  position: absolute;
-  text-align: center;
   display: flex;
-  align-items: start;
-  justify-content: space-evenly;
   flex-direction: column;
-  z-index: 100; }
-  .absolute2 span {
+  justify-content: space-evenly;
+  align-items: left;
+  color: white;
+  font-size: calc(10px + 2vw); }
+  .slide2Content span, .slide3Content span, .slide1Content span {
     background-color: #fab700;
     color: #212121;
     padding: 0 4px; }
-  .absolute2 h2 {
-    font-family: "Raph Lanok Future",sans-serif; }
-    @media (min-width: 1200px) {
-      .absolute2 h2 {
-        font-size: 12rem; } }
-    @media (max-width: 1200px) {
-      .absolute2 h2 {
-        font-size: 8rem; } }
-    @media (max-width: 991px) {
-      .absolute2 h2 {
-        font-size: 8rem; } }
-    @media (max-width: 768px) {
-      .absolute2 h2 {
-        font-size: 6rem; } }
-    @media (max-width: 576px) {
-      .absolute2 h2 {
-        font-size: 5rem; } }
-    @media (max-width: 368px) {
-      .absolute2 h2 {
-        font-size: 4rem; } }
-  @media (min-width: 1200px) {
-    .absolute2 p {
-      font-size: 2rem; } }
-  @media (max-width: 1200px) {
-    .absolute2 p {
-      font-size: 1.8rem; } }
-  @media (max-width: 991px) {
-    .absolute2 p {
-      font-size: 1.8rem; } }
-  @media (max-width: 768px) {
-    .absolute2 p {
-      font-size: 1.6rem; } }
-  @media (max-width: 576px) {
-    .absolute2 p {
-      font-size: 1.6rem; } }
-  @media (max-width: 368px) {
-    .absolute2 p {
-      font-size: 2rem; } }
-  .absolute2 h3 {
+  .slide2Content h3, .slide3Content h3, .slide1Content h3 {
     font-weight: 600;
-    font-size: 45px;
+    font-size: clamp(0em, 1em, 60px);
     line-height: 1.5;
-    width: 50%;
     text-align: left; }
-  .absolute2 h4 {
-    font-size: 18px;
+  .slide2Content p, .slide3Content p, .slide1Content p {
+    font-size: clamp(0em, 0.65em, 40px);
+    font-weight: 500;
     line-height: 1.5;
-    width: 50%;
     text-align: left; }
-  .absolute2 a {
-    font-size: 20px;
+  .slide2Content a, .slide3Content a, .slide1Content a {
+    align-self: flex-start;
+    font-size: clamp(0em, 0.55em, 35px);
     font-weight: 500;
     padding: 12px;
     border-radius: 15px;
@@ -510,66 +445,39 @@ footer {
     text-decoration: none;
     opacity: 0.8;
     transition: all 300ms; }
-    .absolute2 a:hover {
+    .slide2Content a:hover, .slide3Content a:hover, .slide1Content a:hover {
       scale: 1.05;
       opacity: 1; }
 
-.overlay2 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.5; }
-
-.absoluteButton {
-  z-index: 100;
-  height: 33%;
-  color: white;
-  position: absolute;
-  text-align: center;
+.slide3Content {
   display: flex;
   flex-direction: column;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%); }
-  .absoluteButton a {
-    font-size: 20px;
-    font-weight: 500;
-    padding: 12px;
-    border-radius: 15px;
-    border: 1px solid white;
-    color: white;
-    text-decoration: none;
-    opacity: 1;
-    transition: all 400ms ease; }
-    .absoluteButton a:hover {
-      font-size: 22px;
-      opacity: 1; }
+  justify-content: space-around;
+  align-items: center;
+  font-size: calc(15px + 1.5vw); }
+  .slide3Content p {
+    text-align: center; }
+  .slide3Content a {
+    align-self: center; }
+
+.slide1Content h3 {
+  font-family: "Raph Lanok Future",sans-serif;
+  font-weight: 400;
+  font-size: calc(15px + 5.2vw); }
+
+.slide1Content p {
+  text-align: center;
+  font-weight: 400;
+  font-size: calc(10px + .6vw); }
+
+.slide1Content a {
+  align-self: center; }
+
+.carousel-control-prev, .carousel-control-next {
+  width: 10%; }
 
 .video-title {
   margin-bottom: 1.2rem; }
-
-.carouselContainer {
-  max-height: 100%; }
-
-.carouselAbs {
-  position: absolute;
-  width: 70%;
-  left: 50%;
-  top: 70%;
-  transform: translate(-50%, -50%);
-  z-index: 100; }
-
-.carouselDiv {
-  height: 100%;
-  overflow: hidden; }
-  .carouselDiv p {
-    color: white; }
-
-.slide, .slide1, .slide2 {
-  max-height: calc(100vh - 100px); }
 
 .absolute3 {
   width: 100%;
@@ -654,72 +562,70 @@ footer {
     flex-direction: column;
     align-items: center; }
 
-.overlay3 {
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.7; }
-
 #about-us {
   background-color: #e8e8e8;
-  max-width: 100vw; }
-  #about-us div:last-of-type p {
-    text-align: center;
-    line-height: 50px;
-    color: #00266e;
-    padding: 5px;
-    margin: 0; }
-    @media (min-width: 1200px) {
-      #about-us div:last-of-type p {
-        font-size: 3.5rem; } }
-    @media (max-width: 1200px) {
-      #about-us div:last-of-type p {
-        font-size: 3.5rem; } }
-    @media (max-width: 991px) {
-      #about-us div:last-of-type p {
-        font-size: 3.5rem; } }
-    @media (max-width: 768px) {
-      #about-us div:last-of-type p {
-        font-size: 3.5rem; } }
-    @media (max-width: 576px) {
-      #about-us div:last-of-type p {
-        font-size: 3rem; } }
-    @media (max-width: 368px) {
-      #about-us div:last-of-type p {
-        font-size: 2rem; } }
+  max-width: 100vw;
+  padding-bottom: 100px; }
+  #about-us article {
+    margin: 0;
+    padding: 0; }
 
-.about-us-p p {
-  text-align: center;
+.aboutCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 30px 50px;
+  background-color: #eeeeee;
+  border: none;
+  margin: 50px;
+  box-shadow: 0px 10px 14px -4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 10px 14px -4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 10px 14px -4px rgba(0, 0, 0, 0.4); }
+  .aboutCard h3 {
+    margin-bottom: 30px;
+    font-size: 30px; }
+  .aboutCard p {
+    font-size: 24px;
+    text-align: justify; }
+
+.aboutTitle {
+  color: #053c9b; }
+
+.about-us-p, .new-p {
+  text-align: justify;
   color: #00266e;
   margin-bottom: 15px; }
   @media (min-width: 1200px) {
-    .about-us-p p {
+    .about-us-p, .new-p {
       font-size: 2.5rem;
       line-height: 5rem; } }
   @media (max-width: 1200px) {
-    .about-us-p p {
+    .about-us-p, .new-p {
       font-size: 2.5rem;
       line-height: 5rem; } }
   @media (max-width: 991px) {
-    .about-us-p p {
+    .about-us-p, .new-p {
       font-size: 2.5rem;
       line-height: 5rem; } }
   @media (max-width: 768px) {
-    .about-us-p p {
+    .about-us-p, .new-p {
       font-size: 2.5rem;
       line-height: 5rem; } }
   @media (max-width: 576px) {
-    .about-us-p p {
+    .about-us-p, .new-p {
       font-size: 2rem;
       line-height: 3.5rem; } }
   @media (max-width: 368px) {
-    .about-us-p p {
+    .about-us-p, .new-p {
       font-size: 1.8rem;
       line-height: 3rem; } }
+
+.certificaciones {
+  margin: 50px 0; }
+  .certificaciones img {
+    width: clamp(100px, 300px, 300px); }
 
 .contadores {
   display: flex;
@@ -736,6 +642,10 @@ footer {
   .cont div::before {
     content: "+";
     color: #852004; }
+  .cont p {
+    font-weight: 600;
+    text-align: center;
+    font-size: 20px; }
 
 .number {
   color: #852004; }
@@ -758,6 +668,12 @@ footer {
     .number {
       font-size: 3rem; } }
 
+.ocultar {
+  opacity: 0; }
+
+.animar {
+  animation: aparecer 1s; }
+
 @keyframes aparecer {
   0% {
     opacity: 0;
@@ -766,389 +682,237 @@ footer {
     opacity: 1;
     transform: translateY(0); } }
 
-.ocultar {
-  opacity: 0; }
+#new {
+  padding-bottom: 100px; }
+  #new img {
+    width: 600px;
+    border-radius: 4px; }
+  #new article {
+    margin: 0;
+    padding: 0; }
 
-.animar {
-  animation: aparecer 1s; }
+.new-p {
+  text-align: justify; }
+
+.new-subtitle {
+  text-align: left;
+  color: #d7a360; }
+
+.newInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; }
 
 #services {
-  margin-bottom: 50px; }
+  padding-bottom: 100px;
+  background-color: #07141d; }
 
-.Cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-top: 15px; }
+.services-title {
+  color: #e8e8e8; }
 
-.Card {
-  margin: 50px;
-  width: 450px;
-  height: 600px; }
+.services-subtitle {
+  font-size: 24px;
+  color: #e8e8e8; }
 
-.cardInner, .cardInner2, .cardInner3 {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  position: relative; }
-
-.cardInner.isFlipped, .cardInner2.isFlipped, .cardInner3.isFlipped {
-  transform: rotateY(180deg); }
-
-.cardFace {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0px 0px 55px -6px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0px 0px 55px -6px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 0px 55px -6px rgba(0, 0, 0, 0.4); }
-
-.cardFace-front {
-  background-image: linear-gradient(to bottom right, #053c9b 1%, #070427);
-  padding: 30px 30px 0 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
-
-.flipBack, .flipBack2, .flipBack3 {
-  text-decoration: none;
-  outline: none;
-  border: none;
-  color: white;
-  text-align: center;
-  width: 170px;
-  font-weight: 700;
-  font-size: 1.6rem;
-  background-image: linear-gradient(to bottom left, #053c9b 10%, #070427 115%);
-  border: 2px solid #e8e8e8;
-  border-radius: 15px;
-  padding: 15px 20px;
-  margin: 15px 15px;
-  cursor: pointer;
-  transition: all .2s; }
-  .flipBack:hover, .flipBack2:hover, .flipBack3:hover {
-    transform: scale(1.2);
-    color: #ffbf00; }
-
-.cardFace-front h4 {
-  text-align: center;
-  width: 100%;
-  color: white;
-  font-size: 3rem; }
-
-.cardFace-front li {
-  list-style: circle;
-  color: white;
-  padding: 15px 0;
-  margin: 15px 0;
-  font-size: 1.7rem; }
-  @media (max-width: 576px) {
-    .cardFace-front li {
-      font-size: 1.4rem;
-      padding: 0;
-      margin: 10px 0; } }
-
-.cardFace-back {
-  background-color: #e8e8e8;
-  transform: rotateY(180deg); }
-  .cardFace-back h4 {
-    color: white;
-    text-align: center;
-    font-size: 3.5rem; }
-
-.cardContent {
-  width: 100%;
-  height: 100%; }
-
-.cardHead {
-  position: relative;
-  height: 144px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative; }
-  .cardHead p {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    color: #fab700;
-    font-size: 1.6rem;
-    padding-top: 5px;
-    padding-left: 6px;
-    margin: 0; }
-    @media (max-width: 576px) {
-      .cardHead p {
-        font-size: 1.4rem; } }
-  .cardHead div {
+#accordion {
+  margin: 0 auto; }
+  #accordion > li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #e8e8e8;
+    padding: 10px;
+    border-radius: 6px; }
+  #accordion label {
+    padding: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-    .cardHead div h4 {
-      height: 100%;
-      width: 100%;
-      align-items: center;
-      margin: 0; }
-      @media (max-width: 576px) {
-        .cardHead div h4 {
-          font-size: 2.5rem; } }
-  .cardHead::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border-radius: 0 0 50% 0;
-    background-image: linear-gradient(to bottom left, #053c9b 10%, #070427 115%); }
-
-.cardBody {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  height: 80%; }
-  .cardBody h5 {
-    margin: 0;
-    font-size: 2rem;
-    text-align: center; }
-    @media (max-width: 576px) {
-      .cardBody h5 {
-        font-size: 1.2rem; } }
-  .cardBody img {
-    height: 220px; }
-  .cardBody p {
-    font-size: 1.6rem;
-    text-align: center;
-    font-weight: 700; }
-    @media (max-width: 576px) {
-      .cardBody p {
-        font-size: 1.2rem; } }
-    @media (max-width: 500px) {
-      .cardBody p {
-        font-size: 1.2rem; } }
-
-.cardBody-footer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: unset; }
-
-.cardBody-footer-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-  .cardBody-footer-btn button {
-    text-decoration: none;
-    outline: none;
-    border: none;
-    color: white;
-    text-align: center;
-    width: 170px;
-    font-weight: 700;
-    font-size: 1.6rem;
-    background-image: linear-gradient(to bottom left, #053c9b 10%, #070427 115%);
-    border-radius: 15px;
-    padding: 15px 20px;
-    margin: 15px 15px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 500;
     cursor: pointer;
-    transition: all .2s; }
-    @media (max-width: 576px) {
-      .cardBody-footer-btn button {
-        font-size: 1.3rem; } }
-    .cardBody-footer-btn button:hover {
-      transform: scale(1.2);
-      color: #ffbf00; }
-  .cardBody-footer-btn a {
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    width: 170px;
-    font-weight: 700;
-    background-image: linear-gradient(to bottom right, #053c9b 10%, #070427 115%);
-    border-radius: 15px;
-    padding: 15px 20px;
-    margin: 15px 15px;
-    cursor: pointer;
-    transition: all .2s;
-    font-size: 1.6rem; }
-    @media (max-width: 576px) {
-      .cardBody-footer-btn a {
-        font-size: 1.3rem; } }
-    .cardBody-footer-btn a:hover {
-      transform: scale(1.2);
-      color: #fab700; }
+    color: #852004;
+    transition: all 600ms;
+    position: relative; }
+    #accordion label::after {
+      content: "";
+      width: clamp(250px, 30%, 30%);
+      height: 2px;
+      background-color: #852004;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 600ms ease; }
+  #accordion i {
+    color: black;
+    transition: all 300ms; }
+  #accordion button {
+    padding: 10px;
+    margin: 20px 0 10px 0;
+    font-size: 14px; }
+  #accordion input[type='checkbox'] {
+    display: none; }
+  #accordion input[type='checkbox']:checked ~ .contentAccordion {
+    max-height: 3000px; }
+  #accordion input[type='checkbox']:checked + label {
+    font-size: 26px; }
+    #accordion input[type='checkbox']:checked + label::after {
+      transform: scaleX(1); }
+    #accordion input[type='checkbox']:checked + label i {
+      transform: rotate(-90deg); }
+  #accordion h4 {
+    font-size: 24px;
+    margin-block: 40px; }
 
-.cardBody-img {
-  border-radius: 10px;
-  overflow: hidden; }
-  .cardBody-img img {
-    height: 200px; }
+.contentAccordion {
+  padding: 0 10px;
+  line-height: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 600ms ease-in-out; }
+  .contentAccordion li {
+    list-style: disc;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-inline: 30px;
+    padding-block: 15px; }
 
-.featured {
-  border: solid 4px #fab700;
-  box-shadow: 0px 0px 55px -6px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0px 55px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 55px -6px rgba(0, 0, 0, 0.75); }
+.servicesSubtitle {
+  padding: 15px 10px;
+  font-weight: 600;
+  font-size: 20px; }
 
 #contact {
-  background-color: #e8e8e8; }
+  padding-bottom: 100px; }
+  #contact h3 {
+    font-size: 50px;
+    margin: 50px 0 100px 0; }
+  #contact article {
+    padding: 0;
+    margin: 0; }
 
-.info-section {
-  margin-bottom: 40px; }
-  .info-section p {
-    cursor: default;
-    display: inline; }
+.inquiresInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .inquiresInfo a {
+    font-size: 28px;
+    color: #00266e;
+    font-weight: 600; }
+  .inquiresInfo p {
+    font-size: 24px; }
+  .inquiresInfo > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 30px; }
+    .inquiresInfo > div div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .inquiresInfo > div div i {
+        font-size: 18px;
+        margin-right: 5px; }
 
-.info-cont iframe {
-  width: 400px;
-  height: 300px; }
+.contactFormCont {
+  margin-top: 50px; }
 
-.line {
-  position: relative; }
-  .line::before {
-    content: "";
-    width: 30%;
-    height: 2px;
-    background-color: #acacac;
-    position: absolute;
-    top: -18px;
-    left: 0; }
+input {
+  appearance: none;
+  border-radius: 0; }
 
-.info-title, .form-title {
-  font-size: 30px;
-  margin-bottom: 10px; }
-
-a.info-desc {
-  font-size: 14px;
-  color: black;
-  text-decoration: black; }
-  a.info-desc:hover {
-    color: #053c9b; }
-    a.info-desc:hover .fa {
-      animation: shakeA 300ms alternate; }
-
-p.info-desc {
-  font-size: 14px;
-  color: black;
-  text-decoration: black; }
-  p.info-desc:hover .fa {
-    animation: shakeP 350ms alternate; }
-
-@keyframes shakeA {
-  50% {
-    transform: rotate(-15deg) scale(1.2); }
-  100% {
-    transform: rotate(15deg) scale(1); } }
-
-@keyframes shakeP {
-  50% {
-    transform: rotate(180deg) scale(1.2); }
-  100% {
-    transform: rotate(360deg) scale(1); } }
-
-.fa {
-  margin-right: 5px; }
-
-.form-group {
+.cardContact {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: unset;
-  align-items: unset;
-  margin-bottom: 25px; }
-  .form-group button {
-    margin: 0 auto;
-    padding: 5px 0;
-    width: 200px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    background-color: #e8e8e8;
-    border-radius: 4px;
-    font-weight: 500;
-    color: #00266e;
-    transition: all 200ms; }
-    .form-group button:hover {
-      transform: scale(1.2); }
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(153, 153, 153, 0.25);
+  padding: .75rem; }
 
-form label, form p {
+.card-form {
+  padding: 2rem 1rem 0;
+  width: 100%; }
+
+.input {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 1.5rem;
+  margin-bottom: 20px; }
+  .input + .input {
+    margin-top: 1.5rem; }
+
+.input-label {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: .25s ease;
+  font-size: 18px; }
+
+.input-field {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
   font-size: 18px;
-  margin-bottom: 8px;
-  font-weight: 600; }
+  transition: all 250ms ease; }
+  .input-field:focus, .input-field:valid {
+    outline: 0;
+    border-bottom-color: #00266e; }
+    .input-field:focus + .input-label, .input-field:valid + .input-label {
+      color: #053c9b;
+      transform: translateY(-2.4rem); }
 
-form .input, form select, form textarea {
-  height: 4rem;
-  padding: 15px;
-  font-size: 1.6rem;
-  background-color: #e8e8e8;
-  border: none;
-  border-bottom: 1px solid #acacac;
-  outline: none;
-  transition: all 150ms; }
-  form .input:focus, form select:focus, form textarea:focus {
-    border-bottom: 2px solid #053c9b; }
-
-form select {
-  padding: 0 0 0 10px;
-  height: 4rem;
-  font-weight: 600; }
-  form select option {
-    font-size: 1.7rem; }
-
-form #file {
-  font-size: 1.2rem; }
-
-form textarea {
-  height: 14rem;
-  color: #424242;
-  resize: none; }
-  form textarea::-webkit-scrollbar {
+textarea.input-field {
+  resize: none;
+  height: 200px; }
+  textarea.input-field::-webkit-scrollbar {
     width: 5px; }
-  form textarea::-webkit-scrollbar-thumb {
+  textarea.input-field::-webkit-scrollbar-thumb {
     background-color: #acacac;
     border-radius: 30px; }
 
-.contact-cont {
-  padding: 100px 0;
-  position: relative; }
-  .contact-cont::before {
-    content: "";
-    width: 90%;
-    height: 2px;
-    background-color: #acacac;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0); }
-
-.selected {
-  animation: selected 500ms; }
-
-@keyframes selected {
-  50% {
-    transform: scale(1.2); }
-  100% {
-    transform: scale(1); } }
-
-.form-title {
-  margin-bottom: 2rem; }
-
-.g-recaptcha {
+.action {
+  margin-block: 2rem;
   display: flex;
-  justify-content: center;
-  margin: 20px 0; }
+  justify-content: center; }
+
+.action-button {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 1em;
+  width: 50%;
+  font-weight: 500;
+  background-color: #00266e;
+  border-radius: 6px;
+  color: #FFF;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer; }
+  .action-button:disabled {
+    cursor: not-allowed;
+    opacity: .7; }
+  .action-button:focus {
+    outline: 0; }
+
+.card-info {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: .875rem;
+  color: #8597a3; }
+  .card-info a {
+    display: block;
+    color: #6658d3;
+    text-decoration: none; }
 
 #alert {
   background-color: rgba(0, 89, 222, 0.7);
@@ -1219,23 +983,10 @@ form textarea {
 @media (max-width: 991px) {
   #header.hide {
     top: -201px; }
-  .intro {
+  #intro {
     margin-top: 200px; }
-  .info-cont iframe {
-    width: 300px;
-    height: 250px; }
-  form textarea {
-    height: 11rem; }
-  .contact-cont {
-    margin: 0; } }
-
-@media (max-width: 769px) {
-  .contact-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-  form {
-    width: 100%; } }
+  .platformCont {
+    display: none; } }
 
 @media (min-width: 1400px) {
   .cont .number, .cont p {
@@ -1252,7 +1003,7 @@ form textarea {
   .grid-header img {
     width: 90px;
     height: 90px; }
-  .intro {
+  #intro {
     margin-top: 90px; }
   .cont .number, .cont p {
     font-weight: 500; } }
@@ -1289,8 +1040,8 @@ form textarea {
     display: inline; }
   .mediaB {
     display: none; }
-  .intro {
-    margin-top: 165px; }
+  #intro {
+    margin-top: 160px; }
   .footer-title {
     grid-area: title; }
   .footer-slogan {
@@ -1324,15 +1075,8 @@ form textarea {
     display: inline; }
   .mediaB {
     display: none; }
-  .intro {
-    margin-top: 155px; }
-  .about-us-p p {
-    text-align: justify;
-    margin: 15px; }
-  .contact-cont {
-    padding: 30px 0 0 0; }
-  .form-cont {
-    margin: 100px 0; }
+  #intro {
+    margin-top: 150px; }
   footer {
     padding: 20px 20px 0; }
   .footer-title {
@@ -1380,45 +1124,10 @@ form textarea {
     display: none; }
   .mediaA {
     display: inline; }
-  .intro {
-    margin-top: 135px; }
-  .cont {
-    margin: 20px; }
-  .about-us-p p {
-    text-align: justify;
-    margin: 15px; }
+  #intro {
+    margin-top: 132px; }
   #about-us div:last-of-type p {
     line-height: 3.5rem; }
-  .Cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap; }
-  .Card {
-    margin: 20px;
-    width: 315px;
-    height: 420px; }
-    .Card img {
-      height: 100px; }
-  .cardBody {
-    height: 75%;
-    padding: 10px 20px 20px 20px; }
-    .cardBody > div:last-of-type a, .cardBody > div:last-of-type button {
-      padding: 15px 15px;
-      margin-top: 10px; }
-  .cardHead {
-    height: 130px; }
-    .cardHead p {
-      left: 40%; }
-  .cardFace-front {
-    padding: 15px 15px 0 15px; }
-    .cardFace-front ul {
-      margin: 0; }
-  .contact-cont {
-    padding: 30px 0 0 0; }
-  .form-cont {
-    margin: 100px 0; }
   .footer-grid {
     display: flex;
     flex-direction: column;
@@ -1438,12 +1147,28 @@ form textarea {
 @media (max-width: 500px) {
   .grid-header nav .li img {
     display: none; }
-  .intro {
+  #intro {
     margin-top: 132px; }
-  .main-subtitle {
+  .main-subtitle, .new-subtitle, .services-subtitle {
     margin: 0 10px; }
   .main-subtitle-comment {
     font-size: 20px; }
+  .slide3Content a {
+    align-self: flex-start; }
+  .aboutCard {
+    padding: 30px 20px; }
+    .aboutCard h3 {
+      font-size: 26px; }
+    .aboutCard p {
+      font-size: 20px; }
+  #contact h3 {
+    font-size: 40px; }
+  .inquiresInfo a {
+    font-size: 22px; }
+  .inquiresInfo p {
+    font-size: 20px; }
+  .inquiresInfo > div {
+    margin: 15px 0; }
   .footer-slogan {
     padding: 0 30px; }
   .footer-info {
@@ -1467,13 +1192,17 @@ form textarea {
   .close-btn .fa-xmark {
     font-size: 20px; } }
 
-@media (max-width: 400px) {
-  .intro {
+@media (max-width: 405px) {
+  #header .li {
+    margin: 0; }
+  #intro {
     margin-top: 129px; }
-  .main-subtitle {
+  .main-subtitle, .new-subtitle, .services-subtitle {
     margin: 0 10px; }
   .main-subtitle-comment {
     font-size: 18px;
     margin: 0 10px; }
   .footer-slogan {
-    padding: 0; } }
+    padding: 0; }
+  .mediaA i {
+    display: none; } }
