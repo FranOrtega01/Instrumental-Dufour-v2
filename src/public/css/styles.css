@@ -53,6 +53,9 @@ h1 {
   @media (max-width: 400px) {
     h1 {
       font-size: 30px; } }
+  @media (max-width: 350px) {
+    h1 {
+      font-size: 25px; } }
 
 .main-title, .services-title {
   color: #053c9b;
@@ -512,10 +515,10 @@ footer {
         font-size: 6rem; } }
     @media (max-width: 576px) {
       .absolute3 h2 {
-        font-size: 5rem; } }
+        font-size: 4rem; } }
     @media (max-width: 368px) {
       .absolute3 h2 {
-        font-size: 4rem; } }
+        font-size: 3.5rem; } }
   @media (min-width: 1200px) {
     .absolute3 p {
       font-size: 2rem; } }
@@ -1126,6 +1129,8 @@ textarea.input-field {
     display: inline; }
   #intro {
     margin-top: 132px; }
+  .slide a {
+    padding: 8px 10px; }
   #about-us div:last-of-type p {
     line-height: 3.5rem; }
   .footer-grid {
@@ -1161,6 +1166,20 @@ textarea.input-field {
       font-size: 26px; }
     .aboutCard p {
       font-size: 20px; }
+  .servicesSubtitle {
+    font-size: 18px;
+    font-weight: 500; }
+  #services label {
+    font-size: 22px; }
+  #services h4 {
+    font-size: 20px;
+    text-align: left; }
+  #services li {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: justify;
+    margin: 10px; }
   #contact h3 {
     font-size: 40px; }
   .inquiresInfo a {

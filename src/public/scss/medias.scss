@@ -205,6 +205,12 @@
     #intro{
         margin-top: 132px;
     }
+
+    //Slides
+    .slide a{
+        padding:8px 10px;
+    }
+
     #about-us div:last-of-type p{ //Cont p
         line-height: 3.5rem;
     }
@@ -259,7 +265,29 @@
             font-size: 20px;
         }
     }
+    //Services
 
+    .servicesSubtitle{
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    #services {
+        label{
+            font-size: 22px;
+        }
+        h4{
+            font-size: 20px;
+            text-align: left;
+        }
+        li{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 30px;
+            text-align: justify;
+            margin: 10px;
+        }
+    }
     //Contact
     #contact{
         h3{

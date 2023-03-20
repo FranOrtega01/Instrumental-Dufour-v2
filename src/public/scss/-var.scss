@@ -77,6 +77,9 @@ html{
     @media (max-width:400px){
         font-size:30px;
         }
+    @media (max-width:350px){
+        font-size:25px;
+        }
 }
 @mixin li{ //Only for <991px
     @media (max-width:991px){
@@ -172,10 +175,10 @@ html{
         font-size:6rem;
     }
     @media (max-width:576px){
-        font-size:5rem;
+        font-size:4rem;
     }
     @media (max-width:368px){
-        font-size:4rem;
+        font-size:3.5rem;
     }
 }
 @mixin video-subtitle{
